@@ -1,7 +1,7 @@
 int trigPin = 9;
 int  echoPin = 10;
 int relayPin = 7;
-
+int led=5;
 long duration;
 int distance;
 
@@ -9,7 +9,7 @@ void setup() {
 pinMode(trigPin, OUTPUT);
 pinMode(echoPin, INPUT);
 pinMode(relayPin, OUTPUT);
-
+pinMode(ledpin, OUTPUT);
 Serial.begin(9600);
 }
 
@@ -31,10 +31,12 @@ if(distance <= 10)
 {
 digitalWrite(relayPin, HIGH);
 delay(2000);
+digitalwrite(ledpin,HIGH);
 }
 else
 {
 digitalWrite(relayPin, LOW);
+digitalWrite(ledpin, LOW);
 }
 
 delay(500);
