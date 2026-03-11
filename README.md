@@ -1,1 +1,1 @@
-This is the automatic handwasher
+This is the automatic handwasher.
